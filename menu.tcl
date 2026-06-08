@@ -13,7 +13,7 @@ while {1} {
     puts "\t\t 2. Baja de usuario."
     puts "\t\t 3. Cambio de usuario."
     puts "\t\t 0. Salir del programa."
-    puts -nonewline "\t\t Seleccione una opción: "
+    puts -nonewline "\n\t\t Seleccione una opción: "
     flush stdout
     gets stdin opcion
 
