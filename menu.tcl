@@ -4,6 +4,7 @@
 #EL SERVIDOR LINUX
 
 while {1} {
+    exec clear >@stdout
     puts "\t========================================"
     puts "\t ADMINISTRACIÓN DE USUARIOS DEL SISTEMA "
     puts "\t========================================"
@@ -37,7 +38,6 @@ while {1} {
 
             puts "\n\t Presiona cualquier tecla para continuar..."
             gets stdin any
-            exec clear >@stdout
         }
     }
 }

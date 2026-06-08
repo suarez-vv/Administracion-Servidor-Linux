@@ -1,12 +1,14 @@
-while {1} {
+#!/usr/bin/tclsh
 
-    puts "\n================================"
-    puts "      CAMBIOS DE USUARIO"
-    puts "================================"
-    puts "1. Cambiar nombre de usuario"
-    puts "2. Cambiar contraseña"
-    puts "0. Regresar"
-    puts -nonewline "Seleccione una opción: "
+while {1} {
+    exec clear >@stdout
+    puts "\n\t================================"
+    puts "\t       CAMBIOS DE USUARIO"
+    puts "\t================================"
+    puts "\t  1. Cambiar nombre de usuario"
+    puts "\t  2. Cambiar contraseña"
+    puts "\t  0. Regresar"
+    puts -nonewline "\t  Seleccione una opción: "
     flush stdout
 
     gets stdin opcion
@@ -15,21 +17,21 @@ while {1} {
 
         1 {
 
-            puts -nonewline "\nUsuario actual: "
+            puts -nonewline "\n\t  Usuario actual: "
             flush stdout
             gets stdin actual
 
             if {$actual eq ""} {
-                puts "\nError: Debe ingresar un usuario."
+                puts "\n\t  Error: Debe ingresar un usuario."
                 continue
             }
 
             if {[catch {exec id $actual}]} {
-                puts "\nError: El usuario no existe."
+                puts "\n\t  Error: El usuario no existe."
                 continue
             }
 
-            puts -nonewline "Nuevo nombre: "
+            puts -nonewline "\t  Nuevo nombre: "
             flush stdout
             gets stdin nuevo
 
@@ -39,54 +41,54 @@ while {1} {
             }
 
             if {![catch {exec id $nuevo}]} {
-                puts "\nError: Ya existe un usuario con ese nombre."
+                puts "\n\t  Error: Ya existe un usuario con ese nombre."
                 continue
             }
 
             if {[catch {exec sudo usermod -l $nuevo $actual} resultado]} {
-                puts "\nError al modificar usuario:"
+                puts "\n\t  Error al modificar usuario:"
                 puts $resultado
             } else {
-                puts "\nUsuario modificado correctamente."
+                puts "\n\t  Usuario modificado correctamente."
             }
 
-            puts "\nPresione ENTER para continuar..."
+            puts "\n\t  Presione ENTER para continuar..."
             gets stdin pausa
         }
 
         2 {
 
-            puts -nonewline "\nUsuario: "
+            puts -nonewline "\n\t  Usuario: "
             flush stdout
             gets stdin usuario
 
             if {$usuario eq ""} {
-                puts "\nError: Debe ingresar un usuario."
+                puts "\n\t  Error: Debe ingresar un usuario."
                 continue
             }
 
             if {[catch {exec id $usuario}]} {
-                puts "\nError: El usuario no existe."
+                puts "\n\t  Error: El usuario no existe."
                 continue
             }
 
-            puts -nonewline "Nueva contraseña: "
+            puts -nonewline "\t  Nueva contraseña: "
             flush stdout
             gets stdin password
 
             if {[string length $password] < 4} {
-                puts "\nError: La contraseña debe tener al menos 4 caracteres."
+                puts "\n\t  Error: La contraseña debe tener al menos 4 caracteres."
                 continue
             }
 
             if {[catch {exec sh -c "echo '$usuario:$password' | sudo chpasswd"} resultado]} {
-                puts "\nError al cambiar contraseña:"
+                puts "\n\t  Error al cambiar contraseña:"
                 puts $resultado
             } else {
-                puts "\nContraseña actualizada correctamente."
+                puts "\n\t  Contraseña actualizada correctamente."
             }
 
-            puts "\nPresione ENTER para continuar..."
+            puts "\n\t  Presione ENTER para continuar..."
             gets stdin pausa
         }
 
@@ -95,8 +97,8 @@ while {1} {
         }
 
         default {
-            puts "\nOpción inválida."
-            puts "\nPresione ENTER para continuar..."
+            puts "\n\t  Opción inválida."
+            puts "\n\t  Presione ENTER para continuar..."
             gets stdin pausa
         }
     }
