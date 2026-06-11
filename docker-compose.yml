@@ -1,0 +1,23 @@
+services:
+  webtop:
+    image: lscr.io/linuxserver/webtop:ubuntu-xfce
+    container_name: webtop
+    ports:
+      - "3001:3001"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Mexico_City
+    volumes:
+      - ./shared:/workspace
+      - ./datos:/config
+    shm_size: "1gb"
+    restart: unless-stopped
+
+  build:
+    image: ubuntu:22.04
+    container_name: builder
+    working_dir: /workspace
+    volumes:
+      - ./shared:/workspace
+    command: sleep infinity
