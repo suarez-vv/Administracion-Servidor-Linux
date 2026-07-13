@@ -28,11 +28,21 @@ Desarrollar una herramienta capaz de simplificar tareas básicas de administraci
 
 ## Estructura del proyecto
 
-* `menu.tcl` - Menú principal y punto de entrada del sistema.
-* `alta_usuario.tcl` - Gestión de altas de usuarios.
-* `baja_usuario.tcl` - Gestión de eliminación de usuarios.
-* `cambios_usuario.tcl` - Modificación de información de usuarios.
-* `docker-compose.yml` - Configuración de un entorno Linux Webtop remoto desplegado mediante Docker.
+```text
+Administracion-Servidor-Linux/
+│
+├── alta_usuario..tcl                -> Gestión de altas de usuarios.
+│
+├── baja_usuario.tcl                -> Gestión de eliminación de usuarios.
+│
+├── cambios_usuario.tcl                -> Modificación de información de usuarios.
+│
+├── docker-compose.yml                -> Configuración de un entorno Linux Webtop remoto desplegado mediante Docker.
+│
+├── menu.tcl                -> Menú principal y punto de entrada del sistema
+│
+└── README.md
+```
 
 ## Documentación
 
@@ -51,3 +61,7 @@ El repositorio contiene el sistema de administración de usuarios desarrollado e
 * Suárez Vega, Vladimir
 * Zermeño Ojeda, Paola Sarahi
 * Zermeño Ojeda, Diana Valeria
+
+### Historial del Proyecto
+
+- Desarrollo original: **junio de 2026**.
