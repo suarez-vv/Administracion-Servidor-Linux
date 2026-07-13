@@ -1,12 +1,12 @@
 # Administración de Servidor Linux
 
-Sistema desarrollado en TCL para la administración de usuarios y automatización de tareas dentro de un entorno Linux.
+Sistema desarrollado en **TCL** para la administración de usuarios y automatización de tareas dentro de un entorno Linux.
 
-El proyecto permite gestionar usuarios mediante una interfaz basada en menús, además de integrar servicios de red y un entorno Linux accesible mediante Docker.
+El proyecto proporciona una interfaz basada en menús que permite gestionar usuarios mediante scripts automatizados, así como configurar y validar servicios fundamentales dentro de un servidor Linux.
 
-## Objetivo
+Además de las operaciones de administración de usuarios, el sistema incorpora la configuración de servicios de red como SSH, FTP y CUPS, junto con un entorno Linux accesible desde navegador mediante Docker, lo que facilita la realización de pruebas, demostraciones y actividades de administración en un entorno controlado.
 
-Desarrollar una herramienta capaz de simplificar tareas básicas de administración de sistemas Linux mediante scripts escritos en TCL.
+Esta solución combina automatización mediante TCL, herramientas propias del ecosistema Linux y tecnologías de contenedorización para centralizar tareas comunes de administración del sistema, reduciendo la necesidad de ejecutar procedimientos manuales repetitivos.
 
 ## Tecnologías utilizadas
 
