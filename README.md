@@ -70,11 +70,6 @@ La documentación técnica del proyecto se encuentra disponible en:
 
 * `docs/Reporte-Administracion-Servidor-Linux.pdf`
 
-## Nota
-
-La máquina virtual utilizada durante el desarrollo del proyecto no se encuentra incluida en el repositorio debido a su tamaño.
-
-El repositorio contiene el sistema de administración de usuarios desarrollado en TCL, la configuración del entorno Docker y la documentación técnica necesaria para reproducir el entorno y los servicios configurados durante el proyecto.
 
 ## Autores
 
@@ -82,6 +77,15 @@ El repositorio contiene el sistema de administración de usuarios desarrollado e
 * Zermeño Ojeda, Paola Sarahi
 * Zermeño Ojeda, Diana Valeria
 
+## Nota
+
+Proyecto desarrollado originalmente con fines académicos y educativos para practicar y fortalecer conocimientos relacionados con administración de sistemas Linux, automatización mediante scripts TCL, gestión de usuarios, configuración de servicios de red, uso de contenedores Docker y operación básica de entornos Linux.
+
+La máquina virtual utilizada durante el desarrollo del proyecto no se encuentra incluida en el repositorio debido a su tamaño.
+
+El repositorio contiene el sistema de administración de usuarios desarrollado en TCL, la configuración del entorno Docker y la documentación técnica necesaria para reproducir el entorno y los servicios configurados durante el proyecto.
+
+
 ### Historial del Proyecto
 
-- Desarrollo original: **junio de 2026**.
+- Desarrollo original y publicación en Github: **junio de 2026**.
